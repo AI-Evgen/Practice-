@@ -1,0 +1,14 @@
+Practice-/
+├── Task1/               # Кейс-задача 1
+│   ├── main.py          # Код программы
+│   └── README.md        # Описание задачи
+├── Task2/               # Кейс-задача 2
+│   ├── classes.py       # Код классов
+│   └── tests.py         # Тестовая программа
+├── Task3/               # Кейс-задача 3
+│   ├── tourism.sql      # SQL-скрипт БД
+│   └── schema.png       # Схема базы данных
+├── Task4/               # Кейс-задача 4
+│   ├── DelphiProject/   # Исходники Delphi
+│   └── db_script.sql    # Скрипт MS SQL
+└── README.md            # Общее описание репозитория
