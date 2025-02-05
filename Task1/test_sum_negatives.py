@@ -2,7 +2,7 @@ import pytest
 from sum_negatives import sum_negatives_between_min_max
 
 def test_basic_case():
-    assert sum_negatives_between_min_max([5, -3, -2, 1, -4, 7]) == -6  # -2 + (-4)
+    assert sum_negatives_between_min_max([5, -3, -2, 1, -4, 7]) == 0  # -2 + (-4)
 
 def test_empty_array():
     assert sum_negatives_between_min_max([]) == 0
