@@ -33,4 +33,4 @@ if __name__ == "__main__":
     example_arr = [3, -2, 5, -1, 4, -7, 8]
     print(f"Пример работы программы:")
     print(f"Массив: {example_arr}")
-    print(f"Сумма отрицательных элементов: {sum_negatives_between_min_max(example_arr)}"
+    print(f"Сумма отрицательных элементов: {sum_negatives_between_min_max(example_arr)}")
