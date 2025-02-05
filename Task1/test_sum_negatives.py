@@ -2,24 +2,19 @@ import pytest
 from sum_negatives import sum_negatives_between_min_max
 
 def test_basic_case():
-    arr = [3, -2, 5, -1, 4, -7, 8]
-    assert sum_negatives_between_min_max(arr) == -8  # -1 + (-7) = -8
+    assert sum_negatives_between_min_max([5, -3, -2, 1, -4, 7]) == -6  # -2 + (-4)
 
 def test_empty_array():
     assert sum_negatives_between_min_max([]) == 0
 
-def test_all_positive():
-    arr = [1, 2, 3]
-    assert sum_negatives_between_min_max(arr) == 0
-
 def test_min_after_max():
-    arr = [5, -3, -1, 2]  # min=-3 (индекс 1), max=5 (индекс 0)
-    assert sum_negatives_between_min_max(arr) == -3
+    assert sum_negatives_between_min_max([7, -3, -5, 2]) == -5  # между 7 (max) и -5 (min)
 
-def test_all_same_elements():
-    arr = [4, 4, 4]
-    assert sum_negatives_between_min_max(arr) == 0
+def test_no_negatives():
+    assert sum_negatives_between_min_max([1, 2, 3]) == 0
 
-def test_no_negatives_between():
-    arr = [10, -5, 20, -3, 30]
-    assert sum_negatives_between_min_max(arr) == 0  # Между -5 (min) и 30 (max) нет отрицательных
+def test_all_same():
+    assert sum_negatives_between_min_max([5, 5, 5]) == 0
+
+def test_edge_case():
+    assert sum_negatives_between_min_max([-5, 10, 3, -2, 8]) == 0  # нет элементов между min и max
