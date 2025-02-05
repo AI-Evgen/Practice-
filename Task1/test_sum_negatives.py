@@ -8,7 +8,7 @@ def test_empty_array():
     assert sum_negatives_between_min_max([]) == 0
 
 def test_min_after_max():
-    assert sum_negatives_between_min_max([7, -3, -5, 2]) == -5  # между 7 (max) и -5 (min)
+    assert sum_negatives_between_min_max([7, -3, -5, 2]) == -3  # между 7 (max) и -5 (min)
 
 def test_no_negatives():
     assert sum_negatives_between_min_max([1, 2, 3]) == 0
