@@ -1,4 +1,5 @@
 #pragma once
+#include <cmath>
 
 class Shape {
 public:
@@ -7,7 +8,6 @@ public:
     virtual ~Shape() = default;
 };
 
-// Объявления производных классов
 class Rectangle : public Shape {
     double width;
     double height;
