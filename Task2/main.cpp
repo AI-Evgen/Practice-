@@ -7,14 +7,12 @@ int main() {
         new Circle(3)
     };
 
-    // Используем обычный цикл for вместо range-based
-    for (size_t i = 0; i < 2; ++i) {
-        Shape* shape = shapes[i];
-        std::cout << "Area: " << shape->area() 
-                  << "\nPerimeter: " << shape->perimeter() 
+    for(int i = 0; i < 2; i++) {
+        std::cout << "Area: " << shapes[i]->area() 
+                  << "\nPerimeter: " << shapes[i]->perimeter() 
                   << "\n\n";
-        delete shape;  // Освобождаем память
+        delete shapes[i];
     }
-
+    
     return 0;
 }
