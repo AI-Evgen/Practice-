@@ -13,4 +13,4 @@
 3. Для тестирования выполните `insert_data.sql`.
 
 ## ER-диаграмма
-![ER-диаграмма](er_diagram.png
+![ER-диаграмма](er_diagram.png)
