@@ -1,1 +1,2 @@
-mysqldump -u root -p --no-data tourism > tourism_schema.sql
+
+q
