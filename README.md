@@ -1,6 +1,6 @@
 <!-- Логотип и заголовок -->
 <div align="center">
-  <img src="https://via.placeholder.com/150" alt="Логотип" width="120" />
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/%D0%A1%D0%98%D0%9D%D0%95%D0%A0%D0%93%D0%98%D0%AF_%D0%A3%D0%BD%D0%B8%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%82%D0%B5%D1%82_%D0%9B%D0%BE%D0%B3%D0%BE%D1%82%D0%B8%D0%BF.png" alt="Логотип" width="120" />
   <h1>Practice Projects</h1>
   <p>Репозиторий с решениями кейс-задач по программированию</p>
 
