@@ -1,18 +1,24 @@
 #include <iostream>
+#include <iomanip>
+#include <memory>
 #include "shapes.h"
 
 int main() {
-    Shape* shapes[] = {
-        new Rectangle(4, 5),
-        new Circle(3)
-    };
+    try {
+        std::unique_ptr<Shape> shapes[] = {
+            std::make_unique<Rectangle>(4, 5),
+            std::make_unique<Circle>(3)
+        };
 
-    for(int i = 0; i < 2; i++) {
-        std::cout << "Area: " << shapes[i]->area() 
-                  << "\nPerimeter: " << shapes[i]->perimeter() 
-                  << "\n\n";
-        delete shapes[i];
+        std::cout << std::fixed << std::setprecision(2);
+        for (const auto& shape : shapes) {
+            std::cout << "Area: " << shape->area() 
+                      << "\nPerimeter: " << shape->perimeter() 
+                      << "\n\n";
+        }
+    } catch (const std::invalid_argument& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+        return 1;
     }
     
     return 0;
-}
