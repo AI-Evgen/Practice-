@@ -1,0 +1,7 @@
+<Connection>
+  <DriverID>MSSQL</DriverID>
+  <Database>Tourism</Database>
+  <User_Name>admin</User_Name>
+  <Password>admin123</Password>
+  <Server>localhost</Server>
+</Connection>
