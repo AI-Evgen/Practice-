@@ -62,6 +62,6 @@ pip install -r requirements.txt
 ---
 
 ### **📬 Контакты**
-- **Автор**: Евгений Евгеньевич Малинкин 
+- **Автор**: Евгений Евгеньевич 
 - **Email**: malinarchik90@gmail.com
 - **GitHub**: [AI-Evgen](https://github.com/AI-Evgen)
