@@ -12,6 +12,9 @@ CREATE TABLE Tours (
     DurationDays INT
 );
 
+-- Индекс для поиска по названию
+CREATE INDEX idx_Tours_Title ON Tours(Title);
+
 -- Таблица "Заказы"
 CREATE TABLE Orders (
     OrderID INT PRIMARY KEY IDENTITY(1,1),
@@ -19,3 +22,6 @@ CREATE TABLE Orders (
     TourID INT FOREIGN KEY REFERENCES Tours(TourID),
     OrderDate DATE DEFAULT GETDATE()
 );
+
+-- Индекс для связи с Tours
+CREATE INDEX idx_Orders_TourID ON Orders(TourID);
