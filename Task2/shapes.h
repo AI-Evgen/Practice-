@@ -1,39 +1,34 @@
-#pragma once
-#include <cmath>
-#include <stdexcept>
+#ifndef SHAPES_H // Защита от повторного включения
+#define SHAPES_H
 
-/**
- * @brief Базовый класс для геометрических фигур.
- */
+#include <cmath>    // Для M_PI и математических функций
+#include <stdexcept> // Для исключений
+
+// Базовый абстрактный класс фигуры
 class Shape {
 public:
-    virtual double area() const = 0;
-    virtual double perimeter() const = 0;
-    virtual ~Shape() = default;
+    virtual double area() const = 0;      // Чисто виртуальный метод площади
+    virtual double perimeter() const = 0; // Чисто виртуальный метод периметра
+    virtual ~Shape() = default;           // Виртуальный деструктор
 };
 
-/**
- * @brief Класс прямоугольника.
- */
+// Класс прямоугольника
 class Rectangle : public Shape {
-    double width;
-    double height;
+    double width;  // Ширина
+    double height; // Высота
 public:
-    Rectangle(double w, double h);
-    double get_width() const { return width; }
-    double get_height() const { return height; }
-    double area() const override;
-    double perimeter() const override;
+    Rectangle(double w, double h); // Конструктор
+    double area() const override;     // Переопределение метода площади
+    double perimeter() const override; // Переопределение метода периметра
 };
 
-/**
- * @brief Класс окружности.
- */
+// Класс круга
 class Circle : public Shape {
-    double radius;
+    double radius; // Радиус
 public:
-    Circle(double r);
-    double get_radius() const { return radius; }
-    double area() const override;
-    double perimeter() const override;
+    Circle(double r); // Конструктор
+    double area() const override;     // Переопределение метода площади
+    double perimeter() const override; // Переопределение метода периметра
 };
+
+#endif // SHAPES_H
